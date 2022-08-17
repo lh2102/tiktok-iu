@@ -1,0 +1,18 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    width: var(--DefaultLayout-width);
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+.content{
+    flex: 1;
+    background-color: black;
+    color: white;
+}

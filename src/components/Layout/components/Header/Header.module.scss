@@ -1,0 +1,13 @@
+.wrapper {
+    height: var(--DefaultLayout-header-height);
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.content{
+    height: 100%;
+    width: var(--DefaultLayout-width);
+    padding: 0 24px 0 20px;
+}
