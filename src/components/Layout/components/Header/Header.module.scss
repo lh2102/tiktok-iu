@@ -1,4 +1,6 @@
 .wrapper {
+    --search-height: 46px;
+
     height: var(--DefaultLayout-header-height);
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
     display: flex;
@@ -6,8 +8,98 @@
     align-items: center;
     width: 100%;
 }
-.content{
+.content {
     height: 100%;
     width: var(--DefaultLayout-width);
     padding: 0 24px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        img {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .search {
+        width: 361px;
+        height: var(--search-height);
+        background-color: #1618230f;
+        border-radius: 92px;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        padding-right: 0;
+        position: relative;
+        border: 1.5px solid transparent;
+        input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            color: var(--black);
+            height: 100%;
+            caret-color: var(--primary);
+        }
+
+        input:not(:placeholder-shown) ~ .search-btn {
+            color: var(--primary);
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: calc(var(--search-height) - 20px);
+            width: 1px;
+            right: 52.5px;
+            top: 10px;
+            background: rgba(22, 24, 35, 0.12);
+        }
+        &:focus-within {
+            border: 1.5px solid rgba(22, 24, 35, 0.2);
+        }
+        &-btn:active:focus-within{
+            border: 1.5px solid transparent;
+        }
+    }
+    .clear {
+        border: none;
+        color: rgba(22, 24, 35, 0.34);
+        font-size: 16px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 65px;
+    }
+    .loading {
+        border: none;
+        color: rgba(22, 24, 35, 0.34);
+        font-size: 16px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 65px;
+    }
+    .search-btn {
+        height: 100%;
+        border: none;
+        width: 52px;
+        height: 100%;
+        margin-left: 0;
+        padding-left: 0;
+        border-top-right-radius: 92px;
+        border-bottom-right-radius: 92px;
+        color: #ababaf;
+        font-size: 18px;
+        &:hover {
+            background-color: rgba(22, 24, 35, 0.03);
+            cursor: pointer;
+        }
+        &:active {
+            background-color: rgba(22, 24, 35, 0.06);
+        }
+    }
 }
