@@ -61,9 +61,6 @@
         &:focus-within {
             border: 1.5px solid rgba(22, 24, 35, 0.2);
         }
-        &-btn:active:focus-within{
-            border: 1.5px solid transparent;
-        }
     }
     .clear {
         border: none;
@@ -103,3 +100,14 @@
         }
     }
 }
+
+.search_result {
+    width: 361px;
+}
+.search_title {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 12px;
+    color: rgba(22, 24, 35, 0.5);
+}
+

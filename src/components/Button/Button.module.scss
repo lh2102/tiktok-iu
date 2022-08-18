@@ -1,0 +1,74 @@
+.wrapper {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 6px 16px;
+    min-width: 100px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid transparent;
+    user-select: none;
+    + .wrapper {
+        margin-left: 8px;
+    }
+    &.disable {
+        pointer-events: none;
+        opacity: 0.3;
+    }
+}
+.rounded {
+    font-size: 14px;
+    min-width: 90px;
+    border-radius: 50px;
+    color: rgba(22, 24, 35, 0.8);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+.primary {
+    color: white;
+    background-color: var(--primary);
+    border-color: var(--primary);
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+    }
+}
+.outline {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background-color: rgba(255, 255, 255, 1);
+    &:hover {
+        border: 1px solid var(--primary);
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+
+.small {
+    font-weight: 600;
+    min-width: 88px;
+    padding: 0px 16px;
+}
+.large {
+    min-width: 148px;
+    padding: 14px 16px;
+}
+.text {
+    color: #161823;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    font-weight: 600;
+    border-radius: 1px;
+    .icon_upload {
+        margin-right: 10px;
+    }
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+.custom_login{
+
+}
+.icon{
+    margin-right: 8px;
+}

@@ -1,7 +1,6 @@
 function Home() {
     return ( 
         <h2>
-            Home pages
         </h2>
      );
 }

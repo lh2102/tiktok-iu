@@ -1,17 +1,11 @@
-import className from 'classnames/bind'
+import className from 'classnames/bind';
 
-import styles from './Sidebar.module..scss';
+import styles from './Sidebar.module.scss';
 
-
-const cx = className.bind(styles)
+const cx = className.bind(styles);
 
 function Sidebar() {
-
-    return (
-        <div className={cx('wrapper')}>
-            
-        </div>
-    )
+    return <div className={cx('wrapper')}></div>;
 }
 
 export default Sidebar;
