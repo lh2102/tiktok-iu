@@ -1,6 +1,5 @@
 .wrapper {
     --search-height: 46px;
-
     height: var(--DefaultLayout-header-height);
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
     display: flex;
@@ -107,7 +106,41 @@
 .search_title {
     font-size: 14px;
     font-weight: 600;
-    padding: 5px 12px;
+    padding: 13px 12px 5px;
     color: rgba(22, 24, 35, 0.5);
 }
 
+.actions {
+    display: flex;
+    align-items: center;
+    .avatar {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-left: 24px;
+        display: block;
+        cursor: pointer;
+    }
+    .btn_action {
+        width: 32px;
+        height: 32px;
+        color: rgba(22, 24, 35, 1);
+        font-size: 18px;
+        background-color: transparent;
+        margin-left: 16px;
+    }
+}
+.more_btn {
+    margin-left: 16px;
+    padding: 0 4px;
+    color: rgba(22, 24, 35, 1);
+    font-size: 18px;
+    background-color: #fff;
+}
+.more_icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    cursor: pointer;
+}
