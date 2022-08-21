@@ -8,13 +8,12 @@ import {
     faArrowUpFromBracket,
     faEllipsisVertical,
     faLanguage,
-    faUpload,
     faCloudArrowUp,
     faCoins,
     faGear,
     faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
-import { faCircleQuestion, faKeyboard, faMessage, faUser } from '@fortawesome/free-regular-svg-icons';
+import { faCircleQuestion, faKeyboard, faUser } from '@fortawesome/free-regular-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import Tippy_btn from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
@@ -25,6 +24,8 @@ import AccountItem from '~/components/AccountItem';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu';
+import { UploadIcon, MessageIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -70,14 +71,14 @@ const userMenu = [
     {
         icon: <FontAwesomeIcon icon={faGear} />,
         title: 'Settings',
-        to: '/@setting',
+        to: '/setting',
     },
     ...MENU_ITEMS,
     {
         icon: <FontAwesomeIcon icon={faArrowRightFromBracket} />,
         title: 'Log out',
-        to: '/@setting',
-        separate: true
+        to: '/',
+        separate: true,
     },
 ];
 
@@ -138,7 +139,10 @@ function Header() {
                                 </button>
                             </Tippy_btn>
                             <button className={cx('btn_action')}>
-                                <FontAwesomeIcon icon={faMessage}></FontAwesomeIcon>
+                                <MessageIcon></MessageIcon>
+                            </button>
+                            <button className={cx('btn_action')}>
+                                <UploadIcon></UploadIcon>
                             </button>
                         </>
                     ) : (
@@ -153,7 +157,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('avatar')}
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/980fad58cf8fe9a82d10dd77e0a7d14c~c5_720x720.jpeg?x-expires=1661155200&x-signature=BEyzzW3oT1oD9d0IsExz8hn2S8M%3D"
                                 alt="Nguyễn Duy Huy"

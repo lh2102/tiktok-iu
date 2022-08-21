@@ -8,6 +8,29 @@
     --DefaultLayout-header-height: 60px;
     --DefaultLayout-width: 1150px;
 }
+
+//Fonts
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Regular\ \(1\).woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Semibold.woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/ProximaNova-Semibold.woff2');
+    font-weight: 700;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,6 +50,7 @@ html {
 }
 
 button {
+    font-family: "Poppins", sans-serif;
     outline: none;
     border: none;
 }
