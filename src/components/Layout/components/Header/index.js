@@ -2,9 +2,6 @@ import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faCircleXmark,
-    faMagnifyingGlass,
-    faSpinner,
     faArrowUpFromBracket,
     faEllipsisVertical,
     faLanguage,
@@ -14,7 +11,6 @@ import {
     faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
 import { faCircleQuestion, faKeyboard, faUser } from '@fortawesome/free-regular-svg-icons';
-import Tippy from '@tippyjs/react/headless';
 import Tippy_btn from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
@@ -26,6 +22,7 @@ import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu';
 import { UploadIcon, MessageIcon } from '~/components/Icons';
 import Image from '~/components/Image';
+import Search from '../Search';
 
 const cx = classNames.bind(styles);
 
@@ -83,14 +80,14 @@ const userMenu = [
 ];
 
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
+    // const [searchResult, setSearchResult] = useState([]);
     const currentUser = true;
 
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResult([1, 2, 3]);
-        }, 0);
-    }, []);
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setSearchResult([1, 2, 3]);
+    //     }, 0);
+    // }, []);
 
     return (
         <header className={cx('wrapper')}>
@@ -99,7 +96,7 @@ function Header() {
                     <img src={images.logo} alt="tiktok" />
                 </div>
 
-                <Tippy
+                {/* <Tippy
                     interactive={true}
                     visible={searchResult.length > 0}
                     render={(attrs) => (
@@ -125,7 +122,8 @@ function Header() {
                             <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
                         </button>
                     </div>
-                </Tippy>
+                </Tippy> */}
+                <Search></Search>
 
                 <div className={cx('actions')}>
                     {currentUser ? (

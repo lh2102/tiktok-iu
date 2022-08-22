@@ -5,7 +5,7 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 
-console.log(images.noImage);
+// console.log(images.noImage);
 const Image = forwardRef(({ src,className, alt,fallBack=images.noImage, ...props }, ref) => {
     const classes = cx(styles.wrapper, className);
     const [_fallBack, setFallBack] = useState('');

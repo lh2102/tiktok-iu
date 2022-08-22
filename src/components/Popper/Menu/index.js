@@ -13,11 +13,11 @@ const cx = classNames.bind(styles);
 function Menu({ children, items = [] }) {
     const [history, setHistory] = useState([{ data: items }]);
 
-    console.log(history)
-    console.log(history.length);
+    // console.log(history)
+    // console.log(history.length);
     const current = history[history.length - 1]; // biến để phần tử chỉ render phần tử cuối của mảng history
 
-    console.log(current);
+    // console.log(current);
 
     const rendenItems = () => {
         return current.data.map((item, index) => {
@@ -30,7 +30,7 @@ function Menu({ children, items = [] }) {
                     onClick={() => {
                         if (isParent) {
                             setHistory((prev) => {
-                                console.log(prev);
+                                // console.log(prev);
                                 return [...prev, item.children];
                             });
                         }

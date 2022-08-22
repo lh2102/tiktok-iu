@@ -1,0 +1,95 @@
+.search {
+    width: 361px;
+    height: var(--search-height);
+    background-color: #1618230f;
+    border-radius: 92px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    padding-right: 0;
+    position: relative;
+    border: 1.5px solid transparent;
+    input {
+        flex: 1;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        color: var(--black);
+        height: 100%;
+        caret-color: var(--primary);
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: var(--primary);
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: calc(var(--search-height) - 20px);
+        width: 1px;
+        right: 52.5px;
+        top: 10px;
+        background: rgba(22, 24, 35, 0.12);
+    }
+    &:focus-within {
+        border: 1.5px solid rgba(22, 24, 35, 0.2);
+    }
+}
+.clear {
+    border: none;
+    color: rgba(22, 24, 35, 0.34);
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 65px;
+}
+.loading {
+    border: none;
+    color: rgba(22, 24, 35, 0.34);
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    // transform: translateY(-50%);
+    right: 65px;
+    animation: spiner 1s ease infinite;
+}
+@keyframes spiner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }to{
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+.search-btn {
+    height: 100%;
+    border: none;
+    width: 52px;
+    height: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    border-top-right-radius: 92px;
+    border-bottom-right-radius: 92px;
+    color: #ababaf;
+    font-size: 18px;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+        cursor: pointer;
+    }
+    &:active {
+        background-color: rgba(22, 24, 35, 0.06);
+    }
+}
+.search_result {
+    width: 361px;
+}
+.search_title {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 13px 12px 5px;
+    color: rgba(22, 24, 35, 0.5);
+}
