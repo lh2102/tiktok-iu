@@ -6,6 +6,11 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 10;
 }
 .content {
     height: 100%;
@@ -15,6 +20,7 @@
     justify-content: space-between;
     align-items: center;
     .logo {
+        display: flex;
         img {
             display: flex;
             align-items: center;

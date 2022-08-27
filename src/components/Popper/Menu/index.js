@@ -8,7 +8,7 @@ import Header from './Header';
 
 const cx = classNames.bind(styles);
 
-function Menu({ children, items = [] }) {
+function Menu({ children,hideOnClick = true, items = [],}) {
     const [history, setHistory] = useState([{ data: items }]);
 
     // console.log(history)
@@ -40,9 +40,10 @@ function Menu({ children, items = [] }) {
 
     return (
         <Tippy
+            hideOnClick={hideOnClick}
             interactive
             delay={[0, 300]}
-            offset = {[14,15]}
+            offset={[14, 15]}
             placement="bottom-end"
             render={(attrs) => (
                 <div className={cx('menu_lists')} tabIndex="-1" {...attrs}>
@@ -55,7 +56,7 @@ function Menu({ children, items = [] }) {
                                 }}
                             ></Header>
                         )}
-                        {rendenItems()}
+                        <div className={cx('scroll_body')}>{rendenItems()}</div>
                     </PopperWrapper>
                 </div>
             )}

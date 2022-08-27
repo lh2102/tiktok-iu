@@ -20,6 +20,7 @@
         color: var(--black);
         height: 100%;
         caret-color: var(--primary);
+        font-family: "Poppins", sans-serif;
     }
 
     input:not(:placeholder-shown) ~ .search-btn {
@@ -61,7 +62,8 @@
 @keyframes spiner {
     from {
         transform: translateY(-50%) rotate(0);
-    }to{
+    }
+    to {
         transform: translateY(-50%) rotate(360deg);
     }
 }

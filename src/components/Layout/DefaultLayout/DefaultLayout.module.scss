@@ -10,6 +10,7 @@
     // background-color: #ccc;
     display: flex;
     justify-content: space-between;
+    margin-top: var(--DefaultLayout-header-height);
 }
 .content{
     flex: 1;
